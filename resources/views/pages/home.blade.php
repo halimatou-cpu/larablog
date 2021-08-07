@@ -5,15 +5,14 @@
 @endsection
 
 @section('body')
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">
-            Go somewhere
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, World!</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eum ducimus repudiandae ea eius maiores molestiae nesciunt reprehenderit minus amet, deleniti suscipit aliquam recusandae unde consequatur soluta, asperiores dolores quas.</p>
+        <hr class="my-4">
+        <p>Loremmmm ipsum dolor sit amet consectetur adipisicing elit. Tempore illum atque optio odit temporibus eius asperiores sint. Animi fuga ea nihil eius explicabo. Commodi ullam beatae eum magni. In, tenetur!</p>
+        <a class="btn btn-primary btn-lg" href="#">
+            Learn more
             <i class="fas fa-arrow-right"></i>
         </a>
-        </div>
     </div>
 @endsection
