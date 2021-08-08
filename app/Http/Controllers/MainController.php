@@ -12,8 +12,15 @@ class MainController extends Controller
         //$articles = Article::all();
         $articles = Article::paginate(4);
         //dd($articles);
-        return view('pages.articles',[
+        return view('pages.articles.articles',[
            'articles' => $articles,
+        ]);
+    }
+
+    public function show($slug){
+        $article = Article::where('slug',$slug)->firstOrFail();
+        return view('pages.articles.article',[
+            'article'=>$article,
         ]);
     }
 
