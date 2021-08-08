@@ -3,7 +3,8 @@
 namespace App\Observers;
 
 use App\Models\Article;
-use Cocur\Slugify\Slugify;
+//use Cocur\Slugify\Slugify;
+use Illuminate\Support\Str;
 
 class ArticleObserver
 {
@@ -15,8 +16,10 @@ class ArticleObserver
      */
     public function created(Article $article)
     {
-        $instance = new Slugify();
-        $article->slug = $instance->slugify($article->title);
+        //$instance = new Slugify();
+        $article->slug = Str::slug($article->title, '-'); // this function is a helper
+        // composer require laravel/helpers 
+        //$article->slug = $instance->slugify($article->title);
         $article->save();
     }
 
