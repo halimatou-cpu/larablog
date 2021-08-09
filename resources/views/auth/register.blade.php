@@ -2,7 +2,8 @@
 
 @section('body')
 <div class="container">
-    <div class="row justify-content-center">
+    <h1 class="text-center my-5">Page d'inscription</h1>
+    <div class="row justify-content-center pt-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
