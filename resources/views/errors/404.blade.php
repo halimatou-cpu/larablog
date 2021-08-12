@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+@extends('layouts.default')
 
-<html>
-    <head>
-        <title>404 page</title>
-    </head>
-    <body>
-        <p>
-            <strong>This page is not found babe😘</strong>
-        </p>
-    </body>
-</html>
+@section('title')
+    404 page
+@endsection
+
+@section('body')  
+    <p class="text-center m-5">
+        <strong>This page is not found babe😘</strong>
+    </p>
+@endsection

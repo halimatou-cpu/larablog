@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title',
+        'subtitle',
+        'content',
+    ];
+
+    public function dateFormatted(){
+        return date_format($this->created_at, 'd-M-Y');
+    }
 }
