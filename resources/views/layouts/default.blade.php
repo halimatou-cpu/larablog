@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
 
     {{-- Editor TyniMCE --}}
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/msa60e83rznqkmcoznjux42z94q7bybccl2d3vniiev7bcvv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
     <title>
         @yield('title') | Larablog
