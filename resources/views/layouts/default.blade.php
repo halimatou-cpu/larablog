@@ -14,6 +14,10 @@
     {{-- Editor TyniMCE --}}
     <script src="https://cdn.tiny.cloud/1/msa60e83rznqkmcoznjux42z94q7bybccl2d3vniiev7bcvv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dc0477d9c6.js" crossorigin="anonymous"></script> {{-- Lien récu de fontawesome par mail --}}
+
     <title>
         @yield('title') | Larablog
     </title>
@@ -21,10 +25,11 @@
   <body>
     @include('layouts.menu')
 
-    @yield('body')
+    <div class="container justify-content-center mt-3">      
+      @include('layouts.flash')
+    </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/dc0477d9c6.js" crossorigin="anonymous"></script> {{-- Lien récu de fontawesome par mail --}}
+    @yield('body')
+    
   </body>
 </html>
