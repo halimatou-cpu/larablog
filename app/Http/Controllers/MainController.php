@@ -17,8 +17,11 @@ class MainController extends Controller
         ]);
     }
 
-    public function show($slug){
-        $article = Article::where('slug',$slug)->firstOrFail();
+    public function show(Article $article){
+        // $article = Article::where('slug',$slug)->firstOrFail();
+        // return view('pages.articles.article',[
+        //     'article'=>$article,
+        // ]);
         return view('pages.articles.article',[
             'article'=>$article,
         ]);
