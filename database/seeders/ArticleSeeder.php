@@ -16,15 +16,20 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Factory::create();
+        Category::get()->each(function($category){
+            Article::factory(5)->create([
+                "category_id" => $category->id, // surcharge create to pass the current category id
+            ]); //create 5 articles per catory with the fields in definition() in ArticleFactory
+        });
+        // $faker = Factory::create();
 
-        for ($articleNumber=0; $articleNumber < 26; $articleNumber++) { 
-            Article::create([
-                'title' => $faker->sentence(),
-                'subtitle' => $faker->sentence(),
-                'content' => $faker->text($maxNbChars = 600),
-                'category_id' => Category::inRandomOrder()->first()->id,
-            ]);
-        }
+        // for ($articleNumber=0; $articleNumber < 26; $articleNumber++) { 
+        //     Article::create([
+        //         'title' => $faker->sentence(),
+        //         'subtitle' => $faker->sentence(),
+        //         'content' => $faker->text($maxNbChars = 600),
+        //         'category_id' => Category::inRandomOrder()->first()->id,
+        //     ]);
+        // }
     }
 }
