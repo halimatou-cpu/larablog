@@ -26,7 +26,7 @@
                             <a class="btn btn-warning mx-3" href="{{ route('articles.edit', [$article->id]) }}">Editer</a>
                             {{-- <a class="btn btn-danger mx-3" href="{{route('articles.delete', [$article->id])}}">Supprimer</a> --}}
                             <button class="btn btn-danger mx-3" type="button" onclick="document.getElementById('modal-open-{{ $article->id }}').style.display='block'">Supprimer</button>
-                            <form action="{{ route('articles.delete', [$article->id]) }}" method="POST">
+                            <form action="{{ route('articles.destroy', [$article->id]) }}" method="POST">
                                 @csrf
                                 @method("DELETE")
                                 <div class="modal" id="modal-open-{{ $article->id }}">
