@@ -20,6 +20,8 @@ class CreateArticlesTable extends Migration
             $table->string('slug')->nullable();//sera construit à partir du title. 
             //Exemple: title="Mon titre", slug sera "mon-titre"
             $table->text('content');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

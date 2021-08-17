@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Category extends Model
 {
     use HasFactory;
 
@@ -15,18 +15,11 @@ class Article extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
-        'subtitle',
-        'content',
-        'category_id'
+        'label',
     ];
 
-    public function dateFormatted(){
-        return date_format($this->created_at, 'd-M-Y');
-    }
-
-    public function category()
+    public function articles()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Article::class);
     }
 }
