@@ -38,6 +38,16 @@
                     @enderror
                 </div>
             </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="category">Catégorie</label>
+                    <select name="category" class="form-control">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->label }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
             {{-- TODO 
                 --Get old content in case of error during submission
                 --}}

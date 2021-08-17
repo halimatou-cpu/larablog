@@ -6,6 +6,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Manager\ArticleManager;
 use App\Http\Requests\ArticleRequest;
+use App\Models\Category;
 
 class ArticleController extends Controller
 {
@@ -42,7 +43,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('pages.articles.create');
+        return view('pages.articles.create', [
+            "categories" => Category::all(),
+        ]);
     }
 
     /**
@@ -82,6 +85,7 @@ class ArticleController extends Controller
         $article = Article::where('id',$id)->firstOrFail();
         return view('pages.articles.edit', [
             'article' => $article,
+            'categories' => Category::all(),
         ]);
     }
 
