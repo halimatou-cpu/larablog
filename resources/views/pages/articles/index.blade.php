@@ -23,7 +23,7 @@
                         <td>{{ $article->dateFormatted() }}</td>
                         <td class="d-flex">
                             {{-- <a href="{{ route('article', $article) }}">Aperçu</a> --}}
-                            <a class="btn btn-warning mx-3" href="">Editer</a>
+                            <a class="btn btn-warning mx-3" href="{{ route('articles.edit', [$article->id]) }}">Editer</a>
                             {{-- <a class="btn btn-danger mx-3" href="{{route('articles.delete', [$article->id])}}">Supprimer</a> --}}
                             <button class="btn btn-danger mx-3" type="button" onclick="document.getElementById('modal-open-{{ $article->id }}').style.display='block'">Supprimer</button>
                             <form action="{{ route('articles.delete', [$article->id]) }}" method="POST">
