@@ -10,6 +10,8 @@ use Tests\TestCase;
 
 class ModelTest extends TestCase
 {
+    use RefreshDatabase;
+    
     /**
      * A basic feature test example.
      *
