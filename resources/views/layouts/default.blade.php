@@ -21,6 +21,7 @@
     <title>
         @yield('title') | Larablog
     </title>
+    @livewireStyles
   </head>
   <body>
     @include('layouts.menu')
@@ -31,5 +32,6 @@
 
     @yield('body')
     
+    @livewireScripts
   </body>
 </html>
