@@ -14,7 +14,5 @@
             Learn more
             <i class="fas fa-arrow-right"></i>
         </a>
-        {{-- <livewire:counter /> --}}
-        @livewire('counter')
     </div>
 @endsection
