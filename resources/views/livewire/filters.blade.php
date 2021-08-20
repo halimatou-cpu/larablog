@@ -1,5 +1,14 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
+    <div class="row pb-3">
+        <div class="col-10">
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="text" placeholder="Search" wire:model="search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    {{-- @dump($search) --}}
     <div class="row">
         <div class="col-10">
             <div class="articles row justify-content-center">
@@ -34,5 +43,5 @@
                 </div>
             @endforeach
         </div>
-    </div>v
+    </div>
 </div>
