@@ -27,10 +27,3 @@ class Filters extends Component
         ]);
     }
 }
-
-// 'articles' => (empty($this->activeFilters))
-//                 ? Article::all()
-//                 : Article::whereIn('category_id', array_keys($this->activeFilters))->get(),
-//             'articles' => (empty($this->search))
-//                 ? Article::all()
-//                 : Article::where('title', "like", "%$this->search%")->get(),
