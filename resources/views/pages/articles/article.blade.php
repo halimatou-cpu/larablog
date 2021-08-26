@@ -19,6 +19,10 @@
         </div>
     </div>
     <div class="container">
-        <p class="text-center">{!! $article->content !!}</p>
+        <p class="text-center row justify-content-center">
+            {{-- <img src="{{ $article->image }}" class="w-25 my-5"> --}}
+            <img src="{{ Voyager::image( $article->image ) }}" class="w-25 my-5">
+            {!! $article->content !!}
+        </p>
     </div>
 @endsection
